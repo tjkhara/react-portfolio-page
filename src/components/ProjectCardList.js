@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useState, Fragment } from 'react'
 import ProjectCard from './ProjectCard'
+import { PROJECTS } from '../data/portfolio-data'
 
 const ProjectCardList = (props) => {
   return (
-    <div>
-      <h2>Project Card List Component</h2>
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
+    <div className='project-card-grid'>
+      {PROJECTS.map((project) => {
+        return <ProjectCard key={project.id} {...project} />
+      })}
     </div>
   )
 }

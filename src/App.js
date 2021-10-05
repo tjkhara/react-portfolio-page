@@ -1,12 +1,17 @@
 import './App.css'
+import React, { Fragment } from 'react'
 import ProjectCardList from './components/ProjectCardList'
+import { Container, Row, Col, Navbar, NavbarBrand, Jumbotron } from 'reactstrap'
+import Header from './components/Layout/Header'
 
 function App() {
   return (
-    <div>
-      <h1>Portfolio Projects</h1>
-      <ProjectCardList />
-    </div>
+    <React.Fragment>
+      <Header />
+      <Container className='container-spacing'>
+        <ProjectCardList />
+      </Container>
+    </React.Fragment>
   )
 }
 

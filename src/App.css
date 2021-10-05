@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+.container-spacing {
+  margin: 30px auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.project-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-styles {
+  background-color: blueviolet;
+  color: #fff;
+  padding: 1rem;
+  padding-left: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button-styles {
+  background-color: blueviolet;
+  color: #fff;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* ----------- iPhone X ----------- */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .project-card-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
